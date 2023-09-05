@@ -47,6 +47,7 @@ function addInit() {
 }
 
 function initialize() {
+    apSwitch.checked = true;
     gradioObserver.observe(gradioApp(), { childList: true, subtree: true });
 
     loginUserForm = gradioApp().querySelector(".gradio-container > .main > .wrap > .panel > .form")
