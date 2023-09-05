@@ -168,7 +168,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     with gr.Column(min_width=42, scale=1):
                                         historyRefreshBtn = gr.Button(i18n("🔄 刷新"))
                                     with gr.Column(min_width=42, scale=1):
-                                        historyDeleteBtn = gr.Button(i18n("🗑️ 删除"))
+                                        historyDeleteBtn = gr.Button(i18n("🗑️ Delete"))
                             with gr.Row():
                                 with gr.Column(scale=6):
                                     saveFileName = gr.Textbox(
@@ -185,7 +185,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     gr.Markdown(i18n("默认保存于history文件夹"))
                             with gr.Row():
                                 with gr.Column():
-                                    downloadFile = gr.File(interactive=True, label="Download/Upload History")
+                                    downloadFile = gr.File(interactive=True, label="Upload History")
 
                 with gr.Tab(label=i18n("Train")):
                     openai_train_status = gr.Markdown(label=i18n("训练状态"), value=i18n("在这里[查看使用介绍](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B#%E5%BE%AE%E8%B0%83-gpt-35)"))
