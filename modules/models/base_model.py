@@ -257,7 +257,7 @@ class BaseLLMModel:
         def get_return_value():
             return chatbot, status_text
 
-        status_text = i18n("开始实时传输回答……")
+        status_text = i18n("Please wait...")
         if fake_input:
             chatbot.append((fake_input, ""))
         else:
