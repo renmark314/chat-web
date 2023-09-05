@@ -12,7 +12,7 @@ LLAMA_MODEL = None
 LLAMA_INFERENCER = None
 
 # ChatGPT 设置
-INITIAL_SYSTEM_PROMPT = "You are a helpful assistant."
+INITIAL_SYSTEM_PROMPT = "You are ChatGPT, a large language model trained by OpenAI. Carefully heed the user's instructions. Respond using markdown.a"
 API_HOST = "api.openai.com"
 COMPLETION_URL = "https://api.openai.com/v1/chat/completions"
 BALANCE_API_URL="https://api.openai.com/dashboard/billing/credit_grants"
@@ -36,13 +36,13 @@ BILLING_NOT_APPLICABLE_MSG = i18n("账单信息不适用") # 本地运行的模�
 TIMEOUT_STREAMING = 60  # 流式对话时的超时时间
 TIMEOUT_ALL = 200  # 非流式对话时的超时时间
 ENABLE_STREAMING_OPTION = True  # 是否启用选择选择是否实时显示回答的勾选框
-HIDE_MY_KEY = False  # 如果你想在UI中隐藏你的 API 密钥，将此值设置为 True
+HIDE_MY_KEY = True  # 如果你想在UI中隐藏你的 API 密钥，将此值设置为 True
 CONCURRENT_COUNT = 100 # 允许同时使用的用户数量
 
 SIM_K = 5
 INDEX_QUERY_TEMPRATURE = 1.0
 
-CHUANHU_TITLE = i18n("川虎Chat 🚀")
+CHUANHU_TITLE = i18n("ReonGPT 🚀")
 
 CHUANHU_DESCRIPTION = i18n("由Bilibili [土川虎虎虎](https://space.bilibili.com/29125536)、[明昭MZhao](https://space.bilibili.com/24807452) 和 [Keldos](https://github.com/Keldos-Li) 开发<br />访问川虎Chat的 [GitHub项目](https://github.com/GaiZhenbiao/ChuanhuChatGPT) 下载最新版脚本")
 
@@ -53,25 +53,6 @@ ONLINE_MODELS = [
     "gpt-3.5-turbo-0301",
     "gpt-3.5-turbo-0613",
     "gpt-4",
-    "gpt-4-0314",
-    "gpt-4-0613",
-    "gpt-4-32k",
-    "gpt-4-32k-0314",
-    "gpt-4-32k-0613",
-    "川虎助理",
-    "川虎助理 Pro",
-    "GooglePaLM",
-    "xmchat",
-    "Azure OpenAI",
-    "yuanai-1.0-base_10B",
-    "yuanai-1.0-translate",
-    "yuanai-1.0-dialog",
-    "yuanai-1.0-rhythm_poems",
-    "minimax-abab4-chat",
-    "minimax-abab5-chat",
-    "midjourney",
-    "讯飞星火大模型V2.0",
-    "讯飞星火大模型V1.5"
 ]
 
 LOCAL_MODELS = [
@@ -88,7 +69,7 @@ LOCAL_MODELS = [
     "llama-65b-hf",
 ]
 
-if os.environ.get('HIDE_LOCAL_MODELS', 'false') == 'true':
+if os.environ.get('HIDE_LOCAL_MODELS', 'true') == 'true':
     MODELS = ONLINE_MODELS
 else:
     MODELS = ONLINE_MODELS + LOCAL_MODELS
