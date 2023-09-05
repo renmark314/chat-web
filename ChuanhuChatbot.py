@@ -57,7 +57,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
     with gr.Row(equal_height=True):
         with gr.Column(scale=5):
             with gr.Row():
-                chatbot = gr.Chatbot(label="Chuanhu Chat", elem_id="chuanhu-chatbot", latex_delimiters=latex_delimiters_set, height=700, avatar_images=[config.user_avatar, config.bot_avatar])
+                chatbot = gr.Chatbot(label="Assistant", elem_id="chuanhu-chatbot", latex_delimiters=latex_delimiters_set, height=700, avatar_images=[config.user_avatar, config.bot_avatar])
             with gr.Row():
                 with gr.Column(min_width=225, scale=12):
                     user_input = gr.Textbox(
@@ -108,14 +108,14 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     )
                     with gr.Row():
                         single_turn_checkbox = gr.Checkbox(label=i18n("单轮对话"), value=False, elem_classes="switch-checkbox")
-                        use_websearch_checkbox = gr.Checkbox(label=i18n("使用在线搜索"), value=False, elem_classes="switch-checkbox")
+                        use_websearch_checkbox = gr.Checkbox(label=i18n("使用在线搜索"), value=True, elem_classes="switch-checkbox")
                     language_select_dropdown = gr.Dropdown(
                         label=i18n("选择回复语言（针对搜索&索引功能）"),
                         choices=REPLY_LANGUAGES,
                         multiselect=False,
-                        value=REPLY_LANGUAGES[0],
+                        value=REPLY_LANGUAGES[2],
                     )
-                    index_files = gr.Files(label=i18n("上传"), type="file", elem_id="upload-index-file")
+                    index_files = gr.Files(label=i18n("Upload"), type="file", elem_id="upload-index-file")
                     two_column = gr.Checkbox(label=i18n("双栏pdf"), value=advance_docs["pdf"].get("two_column", False))
                     summarize_btn = gr.Button(i18n("总结"))
                     # TODO: 公式ocr
@@ -125,7 +125,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     systemPromptTxt = gr.Textbox(
                         show_label=True,
                         placeholder=i18n("在这里输入System Prompt..."),
-                        label="System prompt",
+                        label="System Prompt",
                         value=INITIAL_SYSTEM_PROMPT,
                         lines=10
                     )
