@@ -411,7 +411,7 @@ class BaseLLMModel:
         should_check_token_count=True,
     ):  # repetition_penalty, top_k
 
-        status_text = "开始生成回答……"
+        status_text = "Please wait..."
         logging.info(
             "用户" + f"{self.user_identifier}" + "的输入为：" +
             colorama.Fore.BLUE + f"{inputs}" + colorama.Style.RESET_ALL
