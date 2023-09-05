@@ -114,7 +114,7 @@ def versions_html():
          • 
         Gradio: {gr.__version__}
          • 
-        <a style="text-decoration:none;color:inherit" href="https://github.com/GaiZhenbiao/ChuanhuChatGPT">ChuanhuChat</a>: {repo_version}
+        <a style="text-decoration:none;color:inherit" href="https://ko-fi.com">ReonGPT</a>: {repo_version}
         """
 
 def version_time():
