@@ -108,7 +108,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                     )
                     with gr.Row():
                         single_turn_checkbox = gr.Checkbox(label=i18n("单轮对话"), value=False, elem_classes="switch-checkbox")
-                        use_websearch_checkbox = gr.Checkbox(label=i18n("使用在线搜索"), value=True, elem_classes="switch-checkbox")
+                        use_websearch_checkbox = gr.Checkbox(label=i18n("使用在线搜索"), value=False, elem_classes="switch-checkbox")
                     language_select_dropdown = gr.Dropdown(
                         label=i18n("选择回复语言（针对搜索&索引功能）"),
                         choices=REPLY_LANGUAGES,
