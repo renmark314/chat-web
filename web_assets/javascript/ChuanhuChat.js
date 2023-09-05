@@ -175,9 +175,11 @@ function adjustDarkMode() {
         }
     }
     
+    // set darkMode as default
+    toggleDarkMode(true);  
+    apSwitch.checked = true; 
+
     const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    apSwitch.checked = darkModeQuery.matches;
-    toggleDarkMode(darkModeQuery.matches);
     darkModeQuery.addEventListener("change", (e) => {
         apSwitch.checked = e.matches;
         toggleDarkMode(e.matches);
