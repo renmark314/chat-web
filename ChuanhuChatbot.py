@@ -188,7 +188,7 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                                     downloadFile = gr.File(interactive=True, label="Upload History")
 
                 with gr.Tab(label=i18n("Train")):
-                    openai_train_status = gr.Markdown(label=i18n("训练状态"), value=i18n("在这里[查看使用介绍](https://github.com/GaiZhenbiao/ChuanhuChatGPT/wiki/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B#%E5%BE%AE%E8%B0%83-gpt-35)"))
+                    openai_train_status = gr.Markdown(label=i18n("训练状态"), value=i18n("🔒 Locked"))
 
                     with gr.Tab(label=i18n("准备数据集")):
                         dataset_preview_json = gr.JSON(label=i18n("数据集预览"), readonly=True)
