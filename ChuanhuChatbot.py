@@ -310,13 +310,13 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
                         # 优先展示自定义的api_host
                         apihostTxt = gr.Textbox(
-                            show_label=False,
+                            show_label=True,
                             placeholder="api.openai.com",
                             label="OpenAI API-Host",
                             value=config.api_host or shared.API_HOST,
                             lines=1,
                             interactive=False,
-                            container=False,
+                            # container=False,
                             elem_classes="view-only-textbox no-container",
                         )
                         # changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
