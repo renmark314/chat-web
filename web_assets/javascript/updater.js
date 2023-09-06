@@ -1,6 +1,6 @@
 
 var updateInfoGotten = false;
-var isLatestVersion = localStorage.getItem('isLatestVersion') || true;
+var isLatestVersion = localStorage.getItem('isLatestVersion') || false;
 
 
 var statusObserver = new MutationObserver(function (mutationsList) {
@@ -30,7 +30,7 @@ var statusObserver = new MutationObserver(function (mutationsList) {
 var showingUpdateInfo = false;
 async function getLatestRelease() {
     try {
-        const response = await fetch('https://api.github.com/repos/gaizhenbiao/chuanhuchatgpt/releases/latest');
+        const response = await fetch('');
         if (!response.ok) {
             console.log(`Error: ${response.status} - ${response.statusText}`);
             updateInfoGotten = true;
