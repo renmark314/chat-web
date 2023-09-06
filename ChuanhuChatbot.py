@@ -318,8 +318,6 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                             interactive=False,
                             # container=False,
                             elem_classes="view-only-textbox no-container",
-                            style={"display": "none;"}
-
                         )
                         
                         # changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
