@@ -151,7 +151,7 @@ function manualCheckUpdate() {
     localStorage.setItem('lastCheckTime', currentTime);
 }
 function noUpdate(message="") {
-    localStorage.setItem('isLatestVersion', 'true');
+    localStorage.setItem('isLatestVersion', 'false');
     isLatestVersion = true;
     noUpdateHtml(message);
 }
