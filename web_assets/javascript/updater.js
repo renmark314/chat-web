@@ -1,6 +1,6 @@
 
-var updateInfoGotten = true;
-var isLatestVersion = localStorage.getItem('isLatestVersion') || false;
+var updateInfoGotten = false;
+var isLatestVersion = localStorage.getItem('isLatestVersion') || true;
 
 
 var statusObserver = new MutationObserver(function (mutationsList) {
