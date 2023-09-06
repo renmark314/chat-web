@@ -1,5 +1,5 @@
 
-var updateInfoGotten = false;
+var updateInfoGotten = true;
 var isLatestVersion = localStorage.getItem('isLatestVersion') || false;
 
 
