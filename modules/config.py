@@ -51,7 +51,7 @@ language = os.environ.get("LANGUAGE", lang_config)
 
 hide_history_when_not_logged_in = config.get(
     "hide_history_when_not_logged_in", False)
-check_update = config.get("check_update", True)
+check_update = config.get("check_update", False)
 show_api_billing = config.get("show_api_billing", False)
 show_api_billing = bool(os.environ.get("SHOW_API_BILLING", show_api_billing))
 
