@@ -309,7 +309,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                         # changeProxyBtn = gr.Button(i18n("🔄 设置代理地址"))
 
                         # 优先展示自定义的api_host
-                        apihostTxt = gr.Textbox(
+                        apihostTxt = gr.Div(
+                            gr.Textbox(
                             show_label=True,
                             placeholder="api.openai.com",
                             label="OpenAI API-Host",
@@ -318,6 +319,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
                             interactive=False,
                             # container=False,
                             elem_classes="view-only-textbox no-container",
+                        ),
+                        style={"display": "none;"}
                         )
                         # changeAPIURLBtn = gr.Button(i18n("🔄 切换API地址"))
                         updateChuanhuBtn = gr.Button(visible=False, elem_classes="invisible-btn", elem_id="update-chuanhu-btn")
