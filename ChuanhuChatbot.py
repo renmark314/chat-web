@@ -310,8 +310,8 @@ with gr.Blocks(theme=small_and_beautiful_theme) as demo:
 
                         # 优先展示自定义的api_host
                         apihostTxt = gr.Textbox(
-                            show_label=True,
-                            placeholder="api.openai.com",
+                            show_label=False,
+                            placeholder="api.openai.com", style="display: none",
                             label="OpenAI API-Host",
                             value=config.api_host or shared.API_HOST,
                             lines=1,
