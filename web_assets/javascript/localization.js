@@ -43,7 +43,7 @@ const usingLatest_i18n = {
 
 const updatingMsg_i18n = {
     'zh': "正在尝试更新...",
-    'en': "Trying to update...",
+    'en': "No updates available! You are using the latest version.",
     'ja': "更新を試みています...",
     'ko': "업데이트를 시도 중...",
     'sv': "Försöker uppdatera...",
