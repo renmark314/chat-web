@@ -44,7 +44,7 @@ INDEX_QUERY_TEMPRATURE = 0.5
 
 CHUANHU_TITLE = i18n("ReonGPT 🚀")
 
-CHUANHU_DESCRIPTION = i18n("Integrating Web Search in GPT")
+CHUANHU_DESCRIPTION = i18n("Integrating Web Search in GPT | UI: GaiZhenbiao")
 
 ONLINE_MODELS = [
     "gpt-3.5-turbo",
